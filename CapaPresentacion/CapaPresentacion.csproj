@@ -117,18 +117,6 @@
     <Compile Include="FrmTextoEmails.Designer.cs">
       <DependentUpon>FrmTextoEmails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu de busqueda 1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu de busqueda 1.Designer.cs">
-      <DependentUpon>Menu de busqueda 1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="prueba2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="prueba2.Designer.cs">
-      <DependentUpon>prueba2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Socio\FrmDeudasSocios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTextoEmails.resx">
       <DependentUpon>FrmTextoEmails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Menu de busqueda 1.resx">
-      <DependentUpon>Menu de busqueda 1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Socio\FrmDeudasSocios.resx">
       <DependentUpon>FrmDeudasSocios.cs</DependentUpon>
@@ -240,6 +225,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="musica.mp3" />
+    <None Include="Resources\cancelar1.png" />
+    <None Include="Resources\iniciar1.png" />
+    <None Include="Resources\cancelar.png" />
+    <None Include="Resources\iniciar.png" />
+    <None Include="Resources\connection-1.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\user-2.png" />
     <None Include="Resources\02_01_04.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
