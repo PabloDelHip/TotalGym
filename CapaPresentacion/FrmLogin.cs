@@ -54,8 +54,41 @@ namespace CapaPresentacion
             // this.Hide();
 
         }
-        
 
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.ingresar_login;
+        }
 
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.ingresar_login_1;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //string usu="";
+            //string pass="";
+            string res = "";
+
+            ini.M_Login = TxtUsuario.Text;
+            ini.M_Pass = TxtPassword.Text;
+            //  res = ini.ExisteUsr();
+            res = ini.ExisteUsr();
+
+            if (res == "1")
+            {
+                //MessageBox.Show(" Usuario encontrado");
+                this.Hide();
+                FrmMain frm = new FrmMain();
+                frm.Show();
+            }
+            else
+                MessageBox.Show(" Usuario no encontrado");
+
+            // FrmPrincipal FormInicial = new FrmPrincipal();
+            // FormInicial.Show();
+            // this.Hide();
+        }
     }
 }

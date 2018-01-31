@@ -81,6 +81,18 @@
     <Compile Include="FrmBusquedaEntradas.Designer.cs">
       <DependentUpon>FrmBusquedaEntradas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCorteEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCorteEntrada.Designer.cs">
+      <DependentUpon>FrmCorteEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCorteSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCorteSalida.Designer.cs">
+      <DependentUpon>FrmCorteSalida.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInstructores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +104,12 @@
     </Compile>
     <Compile Include="FrmMensajeEmail.Designer.cs">
       <DependentUpon>FrmMensajeEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmObervacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmObervacion.Designer.cs">
+      <DependentUpon>FrmObervacion.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmObservacionesAdeudos.cs">
       <SubType>Form</SubType>
@@ -225,6 +243,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="musica.mp3" />
+    <None Include="Resources\ingresar-login-1.png" />
+    <None Include="Resources\ingresar-login.png" />
+    <None Include="Resources\login1.png" />
+    <None Include="Resources\login.png" />
     <None Include="Resources\cancelar1.png" />
     <None Include="Resources\iniciar1.png" />
     <None Include="Resources\cancelar.png" />
