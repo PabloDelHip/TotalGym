@@ -96,7 +96,7 @@ namespace CapaLogicaNegocios
                 mmsg.IsBodyHtml = false; //Si no queremos que se envíe como HTML
 
                 //Correo electronico desde la que enviamos el mensaje
-                mmsg.From = new System.Net.Mail.MailAddress("cotizador@trueatwork.com");
+                mmsg.From = new System.Net.Mail.MailAddress("pablo@inttesi.com.mx");
 
 
                 /*-------------------------CLIENTE DE CORREO----------------------*/
@@ -106,15 +106,15 @@ namespace CapaLogicaNegocios
 
                 //Hay que crear las credenciales del correo emisor
                 cliente.Credentials =
-                    new System.Net.NetworkCredential("cotizador@trueatwork.com", "Cancun17");
+                    new System.Net.NetworkCredential("pablo@inttesi.com.mx", "G@rrones123");
 
                 //Lo siguiente es obligatorio si enviamos el mensaje desde Gmail
 
-                cliente.Port = 587;
+                cliente.Port = 465;
                 cliente.EnableSsl = true;
 
 
-                cliente.Host = "smtp.1and1.com"; //Para Gmail "smtp.gmail.com";
+                cliente.Host = "mail.inttesi.com.mx"; //Para Gmail "smtp.gmail.com";
                 //Enviamos el mensaje      
                 cliente.Send(mmsg);
                 respuesta = respuestaEmail;

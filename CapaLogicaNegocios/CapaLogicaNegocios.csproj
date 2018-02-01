@@ -52,6 +52,7 @@
     <Compile Include="ClsLockers.cs" />
     <Compile Include="ClsMembresias.cs" />
     <Compile Include="ClsObservaciones.cs" />
+    <Compile Include="ClsObservacionesCaja.cs" />
     <Compile Include="ClsRegistroEntradas.cs" />
     <Compile Include="ClsSocios.cs" />
     <Compile Include="ClsTextoEmail.cs" />

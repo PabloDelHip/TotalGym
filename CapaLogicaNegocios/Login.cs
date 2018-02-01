@@ -12,11 +12,13 @@ using System.Data.SqlClient;
 
 namespace CapaLogicaNegocios
 {
-    public class ClsLogin
+    public class Login
     {
         // estructura de la tabla  atributos de la tabla
         public string M_Login { get; set; }
         public string M_Pass { get; set; }
+        public static int idUsuario { get; set; }
+        public static string nombre { get; set; }
         //public string m_Existe { get; set; }
 
         ClsManejador M = new ClsManejador();  // Referenciamos la clase para poder armar la estructura del SP
@@ -51,6 +53,15 @@ namespace CapaLogicaNegocios
 
 
             return Existe;
+        }
+
+        public DataTable buscarUsuario()
+        {
+            List<ClsParametros> lst = new List<ClsParametros>();
+            lst.Add(new ClsParametros("@Login", M_Login));
+            lst.Add(new ClsParametros("@Password", M_Pass));
+            return M.Listado("VerificarUsuario", lst);
+
         }
 
 

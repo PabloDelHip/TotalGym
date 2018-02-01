@@ -16,7 +16,8 @@ namespace CapaPresentacion
 {
     public partial class FrmLogin : Form
     {
-        ClsLogin ini = new ClsLogin();
+        Login ini = new Login();
+
 
         public FrmLogin()
         {
@@ -30,28 +31,6 @@ namespace CapaPresentacion
 
         private void CmdLogin_Click(object sender, EventArgs e)
         {
-            //string usu="";
-            //string pass="";
-            string res="";
-
-            ini.M_Login = TxtUsuario.Text;
-            ini.M_Pass = TxtPassword.Text;
-            //  res = ini.ExisteUsr();
-            res = ini.ExisteUsr();
-
-            if (res=="1")
-                {
-                //MessageBox.Show(" Usuario encontrado");
-                this.Hide();
-                FrmMain frm = new FrmMain();
-                frm.Show();
-                }
-            else
-                MessageBox.Show(" Usuario no encontrado");
-
-            // FrmPrincipal FormInicial = new FrmPrincipal();
-            // FormInicial.Show();
-            // this.Hide();
 
         }
 
@@ -67,28 +46,32 @@ namespace CapaPresentacion
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //string usu="";
-            //string pass="";
-            string res = "";
-
             ini.M_Login = TxtUsuario.Text;
             ini.M_Pass = TxtPassword.Text;
-            //  res = ini.ExisteUsr();
-            res = ini.ExisteUsr();
+            DataTable dt = ini.buscarUsuario();
 
-            if (res == "1")
+            int numeroFilas = dt.Rows.Count;
+
+            if (numeroFilas == 1)
             {
-                //MessageBox.Show(" Usuario encontrado");
-                this.Hide();
-                FrmMain frm = new FrmMain();
-                frm.Show();
-            }
-            else
-                MessageBox.Show(" Usuario no encontrado");
+                foreach (DataRow filas in dt.Rows)
+                {
+                    Login.idUsuario = Convert.ToInt32(filas["idUsuario"]);
+                    Login.nombre = Convert.ToString(filas["Nombre"]);
+                }
 
-            // FrmPrincipal FormInicial = new FrmPrincipal();
-            // FormInicial.Show();
-            // this.Hide();
+                this.Hide();
+                FrmObservacion abrir = new FrmObservacion();
+                abrir.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos", "Usuario no encontrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                TxtPassword.Text = "";
+                TxtUsuario.Text = "";
+                TxtUsuario.Focus();
+            }
         }
     }
 }

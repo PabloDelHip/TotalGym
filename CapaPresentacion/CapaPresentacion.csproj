@@ -105,11 +105,11 @@
     <Compile Include="FrmMensajeEmail.Designer.cs">
       <DependentUpon>FrmMensajeEmail.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmObervacion.cs">
+    <Compile Include="FrmObservacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmObervacion.Designer.cs">
-      <DependentUpon>FrmObervacion.cs</DependentUpon>
+    <Compile Include="FrmObservacion.Designer.cs">
+      <DependentUpon>FrmObservacion.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmObservacionesAdeudos.cs">
       <SubType>Form</SubType>
@@ -173,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMensajeEmail.resx">
       <DependentUpon>FrmMensajeEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmObservacion.resx">
+      <DependentUpon>FrmObservacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmObservacionesAdeudos.resx">
       <DependentUpon>FrmObservacionesAdeudos.cs</DependentUpon>
@@ -243,6 +246,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="musica.mp3" />
+    <None Include="Resources\Continuar.png" />
     <None Include="Resources\ingresar-login-1.png" />
     <None Include="Resources\ingresar-login.png" />
     <None Include="Resources\login1.png" />
