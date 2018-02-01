@@ -168,6 +168,9 @@
     <EmbeddedResource Include="FrmBusquedaEntradas.resx">
       <DependentUpon>FrmBusquedaEntradas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCorteEntrada.resx">
+      <DependentUpon>FrmCorteEntrada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInstructores.resx">
       <DependentUpon>FrmInstructores.cs</DependentUpon>
     </EmbeddedResource>

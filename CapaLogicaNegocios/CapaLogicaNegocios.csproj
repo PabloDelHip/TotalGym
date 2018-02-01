@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClsCorteCaja.cs" />
     <Compile Include="ClsCrearTicket.cs" />
     <Compile Include="ClsGeneral.cs" />
     <Compile Include="ClsInstructores.cs" />

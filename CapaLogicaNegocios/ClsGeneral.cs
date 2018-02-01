@@ -106,12 +106,13 @@ namespace CapaLogicaNegocios
 
                 //Hay que crear las credenciales del correo emisor
                 cliente.Credentials =
-                    new System.Net.NetworkCredential("pablo@inttesi.com.mx", "G@rrones123");
+                    new System.Net.NetworkCredential("pablo@inttesi.com.mx", "Inttesi#2018");
 
                 //Lo siguiente es obligatorio si enviamos el mensaje desde Gmail
 
-                cliente.Port = 465;
+                cliente.Port = 587;
                 cliente.EnableSsl = true;
+                
 
 
                 cliente.Host = "mail.inttesi.com.mx"; //Para Gmail "smtp.gmail.com";

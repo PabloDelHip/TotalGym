@@ -30,20 +30,14 @@ namespace CapaPresentacion
             {
                 ArrayList email = new ArrayList();
                 email.Add("pablodelhip@gmail.com");
-
-                foreach (string lista in email)
-                {
-                    MessageBox.Show(lista);
-                }
-
-                //cls_observaciones_caja.m_texto = txtTexto.Text;
-                //cls_observaciones_caja.m_idUsuario = Login.idUsuario;
-                //string respuesta = cls_observaciones_caja.agregarObservacion();
-                //cls_generales.EnviarCorreo(email, txtTexto.Text,"Observaciones","");
-                //MessageBox.Show(respuesta);
-                //this.Hide();
-                //FrmCorteEntrada abrir = new FrmCorteEntrada();
-                //abrir.Show();
+                cls_observaciones_caja.m_texto = txtTexto.Text;
+                cls_observaciones_caja.m_idUsuario = Login.idUsuario;
+                string respuesta = cls_observaciones_caja.agregarObservacion();
+                cls_generales.EnviarCorreo(email, txtTexto.Text, "Observaciones", "");
+                MessageBox.Show(respuesta);
+                this.Hide();
+                FrmCorteEntrada abrir = new FrmCorteEntrada();
+                abrir.Show();
             }
         }
 
