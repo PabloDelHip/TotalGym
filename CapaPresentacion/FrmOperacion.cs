@@ -23,7 +23,11 @@ namespace CapaPresentacion
         ClsSocios cls_socios = new ClsSocios();
         ClsLockers cls_lockers = new ClsLockers();
         ClsMembresias cls_membresias = new ClsMembresias();
-        SoundPlayer sonido = new SoundPlayer(); 
+        SoundPlayer sonido = new SoundPlayer();
+        ClsHdrVentaHist cls_hdr_venta_hist = new ClsHdrVentaHist();
+        List<datosVenta> lista_datos_venta = new List<datosVenta>();
+        double SubtotalAPagar=0;
+        int FolioVenta;
         public FrmOperacion()
         {
             InitializeComponent();
@@ -460,6 +464,7 @@ namespace CapaPresentacion
                 cls_membresias.m_idMembresia = Convert.ToInt32(cbbMembresia.SelectedValue.ToString());
                 cls_membresias.Tipo = 2;
                 DataTable dt = cls_membresias.seleccionarMembresias();
+                datosVenta DatosVenta;
                 foreach (DataRow filas in dt.Rows)
                 {
 
@@ -469,16 +474,32 @@ namespace CapaPresentacion
                     //se agregan los datos
                     dataGridView2.Rows[rowEscribir].Cells[0].Value = filas["Descripcion"].ToString();
                     dataGridView2.Rows[rowEscribir].Cells[1].Value = filas["Costo"].ToString();
-
-
+                    SubtotalAPagar += Convert.ToDouble(filas["Costo"]);
+                    DatosVenta = new datosVenta();
+                    DatosVenta.Item = "";
+                    DatosVenta.Monto = 0;
+                    DatosVenta.Tipo = 'M';
+                    lista_datos_venta.Add(DatosVenta);
                 }
+
+                
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            sonido.Stream = Properties.Resources._02_01_04;
-            sonido.Play();
+            double total_a_pagar_Iva = (SubtotalAPagar * 0.16);
+            double total_a_pagar = SubtotalAPagar + total_a_pagar_Iva;
+            cls_hdr_venta_hist.m_IdSocio = 1;
+            cls_hdr_venta_hist.m_Subtotal = SubtotalAPagar;
+            cls_hdr_venta_hist.m_IVA = total_a_pagar_Iva;
+            cls_hdr_venta_hist.m_Total = total_a_pagar;
+            cls_hdr_venta_hist.m_User_modif = Login.nombre;
+
+            FolioVenta = Convert.ToInt32(cls_hdr_venta_hist.guardarVenta());
+            MessageBox.Show("El folio es: "+ FolioVenta.ToString());
+
+            Login.dineroEntrada += total_a_pagar;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -489,4 +510,15 @@ namespace CapaPresentacion
 
         }
     }
+
+    class datosVenta
+    {
+        string item;
+        char tipo;
+        double monto;
+
+        public string Item { get => item; set => item = value; }
+        public char Tipo { get => tipo; set => tipo = value; }
+        public double Monto { get => monto; set => monto = value; }
     }
+}

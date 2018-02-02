@@ -183,8 +183,13 @@
     <EmbeddedResource Include="FrmCorteEntrada.resx">
       <DependentUpon>FrmCorteEntrada.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="FrmCortesCaja.resx">
       <DependentUpon>FrmCortesCaja.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="FrmCorteSalida.resx">
+      <DependentUpon>FrmCorteSalida.cs</DependentUpon>
+>>>>>>> 5dbc4da04bb1d73c5fbba2efb04819f505d8e0b0
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInstructores.resx">
       <DependentUpon>FrmInstructores.cs</DependentUpon>
