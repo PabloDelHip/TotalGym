@@ -36,7 +36,17 @@ namespace CapaPresentacion
         {
 
         }
-
+        private void validarCampos(object sender, EventArgs e)
+        {
+            if (txtSocio.Text != null)
+            {
+                btnBuscar.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("No pueden estar los campos vacios para realizar la busqueda");
+            }
+        }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             try
