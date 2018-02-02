@@ -20,8 +20,6 @@ namespace CapaLogicaNegocios
             lst.Add(new ClsParametros("@Tipo", Tipo));
             lst.Add(new ClsParametros("@IdMembresia", m_idMembresia));
             return M.Listado("select_membresias", lst);
-
-
         }
-   }
+    }
 }

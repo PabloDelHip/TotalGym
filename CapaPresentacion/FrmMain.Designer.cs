@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.corteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sociosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deudasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deudasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,10 +43,8 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pPrincipal = new System.Windows.Forms.Panel();
-            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.corteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ptbImagenSocio = new System.Windows.Forms.PictureBox();
+            this.pPrincipal = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenSocio)).BeginInit();
@@ -64,6 +64,21 @@
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // inicioToolStripMenuItem
+            // 
+            this.inicioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.corteToolStripMenuItem});
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.inicioToolStripMenuItem.Text = "Inicio";
+            // 
+            // corteToolStripMenuItem
+            // 
+            this.corteToolStripMenuItem.Name = "corteToolStripMenuItem";
+            this.corteToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.corteToolStripMenuItem.Text = "Corte";
+            this.corteToolStripMenuItem.Click += new System.EventHandler(this.corteToolStripMenuItem_Click);
             // 
             // sociosToolStripMenuItem
             // 
@@ -133,7 +148,7 @@
             this.panel1.Controls.Add(this.ptbImagenSocio);
             this.panel1.Location = new System.Drawing.Point(829, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(457, 597);
+            this.panel1.Size = new System.Drawing.Size(457, 859);
             this.panel1.TabIndex = 9;
             // 
             // txtFechaVencimiento
@@ -172,32 +187,6 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "NOMBRE";
             // 
-            // pPrincipal
-            // 
-            this.pPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.pPrincipal.BackColor = System.Drawing.Color.White;
-            this.pPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pPrincipal.Location = new System.Drawing.Point(12, 27);
-            this.pPrincipal.Name = "pPrincipal";
-            this.pPrincipal.Size = new System.Drawing.Size(811, 597);
-            this.pPrincipal.TabIndex = 10;
-            // 
-            // inicioToolStripMenuItem
-            // 
-            this.inicioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.corteToolStripMenuItem});
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.inicioToolStripMenuItem.Text = "Inicio";
-            // 
-            // corteToolStripMenuItem
-            // 
-            this.corteToolStripMenuItem.Name = "corteToolStripMenuItem";
-            this.corteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.corteToolStripMenuItem.Text = "Corte";
-            this.corteToolStripMenuItem.Click += new System.EventHandler(this.corteToolStripMenuItem_Click);
-            // 
             // ptbImagenSocio
             // 
             this.ptbImagenSocio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -209,11 +198,22 @@
             this.ptbImagenSocio.TabStop = false;
             this.ptbImagenSocio.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // pPrincipal
+            // 
+            this.pPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pPrincipal.BackColor = System.Drawing.Color.White;
+            this.pPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pPrincipal.Location = new System.Drawing.Point(12, 27);
+            this.pPrincipal.Name = "pPrincipal";
+            this.pPrincipal.Size = new System.Drawing.Size(811, 710);
+            this.pPrincipal.TabIndex = 10;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 487);
+            this.ClientSize = new System.Drawing.Size(913, 749);
             this.Controls.Add(this.pPrincipal);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
