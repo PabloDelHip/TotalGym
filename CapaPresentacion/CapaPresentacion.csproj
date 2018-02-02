@@ -249,6 +249,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="musica.mp3" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\pencil.png" />
+    <None Include="Resources\invoice.png" />
+    <None Include="Resources\add1.png" />
     <None Include="Resources\Continuar.png" />
     <None Include="Resources\ingresar-login-1.png" />
     <None Include="Resources\ingresar-login.png" />
