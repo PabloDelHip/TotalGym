@@ -52,6 +52,7 @@
     <Compile Include="ClsInstructores.cs" />
     <Compile Include="ClsLockers.cs" />
     <Compile Include="ClsMembresias.cs" />
+    <Compile Include="ClsMovCortesCaja.cs" />
     <Compile Include="ClsObservaciones.cs" />
     <Compile Include="ClsObservacionesCaja.cs" />
     <Compile Include="ClsRegistroEntradas.cs" />

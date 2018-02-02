@@ -36,6 +36,7 @@
             this.instructoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuracionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textoDeEmailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialCortesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtFechaVencimiento = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -43,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ptbImagenSocio = new System.Windows.Forms.PictureBox();
             this.pPrincipal = new System.Windows.Forms.Panel();
+            this.cortesDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenSocio)).BeginInit();
@@ -54,7 +56,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sociosToolStripMenuItem,
             this.instructoresToolStripMenuItem,
-            this.configuracionesToolStripMenuItem});
+            this.configuracionesToolStripMenuItem,
+            this.historialCortesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
@@ -115,6 +118,14 @@
             this.textoDeEmailsToolStripMenuItem.Size = new System.Drawing.Size(217, 30);
             this.textoDeEmailsToolStripMenuItem.Text = "Texto de Emails";
             this.textoDeEmailsToolStripMenuItem.Click += new System.EventHandler(this.textoDeEmailsToolStripMenuItem_Click);
+            // 
+            // historialCortesToolStripMenuItem
+            // 
+            this.historialCortesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cortesDeCajaToolStripMenuItem});
+            this.historialCortesToolStripMenuItem.Name = "historialCortesToolStripMenuItem";
+            this.historialCortesToolStripMenuItem.Size = new System.Drawing.Size(145, 29);
+            this.historialCortesToolStripMenuItem.Text = "Historial Cortes";
             // 
             // panel1
             // 
@@ -198,6 +209,13 @@
             this.pPrincipal.Size = new System.Drawing.Size(1216, 917);
             this.pPrincipal.TabIndex = 10;
             // 
+            // cortesDeCajaToolStripMenuItem
+            // 
+            this.cortesDeCajaToolStripMenuItem.Name = "cortesDeCajaToolStripMenuItem";
+            this.cortesDeCajaToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.cortesDeCajaToolStripMenuItem.Text = "Cortes de caja";
+            this.cortesDeCajaToolStripMenuItem.Click += new System.EventHandler(this.cortesDeCajaToolStripMenuItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -239,5 +257,7 @@
         private System.Windows.Forms.ToolStripMenuItem entradasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuracionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem textoDeEmailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historialCortesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cortesDeCajaToolStripMenuItem;
     }
 }
