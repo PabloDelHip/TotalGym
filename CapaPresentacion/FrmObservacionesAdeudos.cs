@@ -26,9 +26,24 @@ namespace CapaPresentacion
             cls_observaciones.m_IdSocio = idSocio;
             DataTable dt = cls_observaciones.BuscarObservacion();
             dataGridView1.DataSource = dt;
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "FECHA";
+            dataGridView1.Columns[2].HeaderText = "OBSERVACION";
+            dataGridView1.Columns[3].HeaderText = "ID SOCIO";
 
         }
-
+        private void validarCampos(object sender, EventArgs e)
+        {
+            if (txtAgregarComentario.Text != null)
+            {
+                btnAgregarComentario.Enabled = true;
+            }
+            else
+            {
+                btnAgregarComentario.Enabled = false;
+                MessageBox.Show("No pueden estar los campos vacios para realizar la busqueda");
+            }
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -51,6 +66,8 @@ namespace CapaPresentacion
                 {
                     bandera = respuesta;
                     MessageBox.Show(respuesta);
+                    txtAgregarComentario.Text = "";
+                    FrmObservacionesAdeudos_Load(sender, e);
                 }
                 else
                 {

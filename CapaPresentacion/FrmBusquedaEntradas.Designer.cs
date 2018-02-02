@@ -30,6 +30,7 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnGenerarReporte = new System.Windows.Forms.Button();
             this.dtpFinBusqueda = new System.Windows.Forms.DateTimePicker();
             this.dtpInicioBusqueda = new System.Windows.Forms.DateTimePicker();
             this.txtSocio = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvEntradas = new System.Windows.Forms.DataGridView();
-            this.btnGenerarReporte = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).BeginInit();
@@ -74,6 +74,20 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnGenerarReporte
+            // 
+            this.btnGenerarReporte.Enabled = false;
+            this.btnGenerarReporte.Image = global::CapaPresentacion.Properties.Resources.add1;
+            this.btnGenerarReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerarReporte.Location = new System.Drawing.Point(869, 281);
+            this.btnGenerarReporte.Name = "btnGenerarReporte";
+            this.btnGenerarReporte.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnGenerarReporte.Size = new System.Drawing.Size(278, 50);
+            this.btnGenerarReporte.TabIndex = 6;
+            this.btnGenerarReporte.Text = "Generar Reporte";
+            this.btnGenerarReporte.UseVisualStyleBackColor = true;
+            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
             // 
             // dtpFinBusqueda
             // 
@@ -148,20 +162,6 @@
             this.dgvEntradas.Size = new System.Drawing.Size(1162, 448);
             this.dgvEntradas.TabIndex = 0;
             // 
-            // btnGenerarReporte
-            // 
-            this.btnGenerarReporte.Enabled = false;
-            this.btnGenerarReporte.Image = global::CapaPresentacion.Properties.Resources.add1;
-            this.btnGenerarReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenerarReporte.Location = new System.Drawing.Point(869, 281);
-            this.btnGenerarReporte.Name = "btnGenerarReporte";
-            this.btnGenerarReporte.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnGenerarReporte.Size = new System.Drawing.Size(278, 50);
-            this.btnGenerarReporte.TabIndex = 6;
-            this.btnGenerarReporte.Text = "Generar Reporte";
-            this.btnGenerarReporte.UseVisualStyleBackColor = true;
-            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
-            // 
             // FrmBusquedaEntradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -172,6 +172,7 @@
             this.Name = "FrmBusquedaEntradas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entradas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmBusquedaEntradas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

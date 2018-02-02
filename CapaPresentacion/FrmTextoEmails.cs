@@ -43,15 +43,8 @@ namespace CapaPresentacion
             txtCuerpoCumpleañeros.Enabled = true;
             btnGuardarCumpleañeos.Enabled = true;
         }
-
-        private void btnGuardarAdeudos_Click(object sender, EventArgs e)
+        private void crearTicket()
         {
-            cls_textoEmail.m_AsuntoDeudas = txtAsuntoAdeudos.Text;
-            cls_textoEmail.m_AsuntoCumpleanos = txtAsuntoCumpleañeros.Text;
-            cls_textoEmail.m_TextoCorreo = txtCuerpoAdeudos.Text;
-            cls_textoEmail.m_TextoCumpleAnos = txtCuerpoCumpleañeros.Text;
-            string respuesta = cls_textoEmail.modificarTextosEmails();
-            MessageBox.Show(respuesta);
             // codigo para probar la creacion del ticket solamente
             ClsCrearTicket t = new ClsCrearTicket();
 
@@ -66,7 +59,7 @@ namespace CapaPresentacion
             t.textoIzquierda("R.F.C: #########");
             t.textoIzquierda("E-MAIL: micorreo@midireccion.com");
             t.textoIzquierda(" ");
-            t.textoExtremos("Caja # 1","Ticket # ");
+            t.textoExtremos("Caja # 1", "Ticket # ");
 
             //sub cabecera
             t.textoIzquierda("");
@@ -84,6 +77,16 @@ namespace CapaPresentacion
             t.textoIzquierda("");
             //t.cortarTicket();
             t.imprimirTicket("Microsoft XPS Document Writer");
+        }
+        private void btnGuardarAdeudos_Click(object sender, EventArgs e)
+        {
+            cls_textoEmail.m_AsuntoDeudas = txtAsuntoAdeudos.Text;
+            cls_textoEmail.m_AsuntoCumpleanos = txtAsuntoCumpleañeros.Text;
+            cls_textoEmail.m_TextoCorreo = txtCuerpoAdeudos.Text;
+            cls_textoEmail.m_TextoCumpleAnos = txtCuerpoCumpleañeros.Text;
+            string respuesta = cls_textoEmail.modificarTextosEmails();
+            MessageBox.Show(respuesta);
+           
         }
 
         private void btnGuardarCumpleañeos_Click(object sender, EventArgs e)
