@@ -39,11 +39,11 @@
   <ItemGroup>
     <Reference Include="AForge.Video, Version=2.1.0.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Debug\AForge.Video.dll</HintPath>
+      <HintPath>D:\Figo\Inttesi\Projectos\Gym\bin\Debug\AForge.Video.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Video.DirectShow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+      <HintPath>D:\Figo\Inttesi\Projectos\Gym\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
@@ -93,6 +93,12 @@
     <Compile Include="FrmCorteSalida.Designer.cs">
       <DependentUpon>FrmCorteSalida.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCortesCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCortesCaja.Designer.cs">
+      <DependentUpon>FrmCortesCaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInstructores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,12 @@
     </Compile>
     <Compile Include="FrmReporteEntradas.Designer.cs">
       <DependentUpon>FrmReporteEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteMovCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteMovCaja.Designer.cs">
+      <DependentUpon>FrmReporteMovCaja.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTextoEmails.cs">
       <SubType>Form</SubType>
@@ -171,6 +183,14 @@
     <EmbeddedResource Include="FrmCorteEntrada.resx">
       <DependentUpon>FrmCorteEntrada.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="FrmCortesCaja.resx">
+      <DependentUpon>FrmCortesCaja.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="FrmCorteSalida.resx">
+      <DependentUpon>FrmCorteSalida.cs</DependentUpon>
+>>>>>>> 5dbc4da04bb1d73c5fbba2efb04819f505d8e0b0
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInstructores.resx">
       <DependentUpon>FrmInstructores.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteEntradas.resx">
       <DependentUpon>FrmReporteEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteMovCaja.resx">
+      <DependentUpon>FrmReporteMovCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTextoEmails.resx">
       <DependentUpon>FrmTextoEmails.cs</DependentUpon>

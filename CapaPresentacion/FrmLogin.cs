@@ -61,7 +61,10 @@ namespace CapaPresentacion
                 }
 
                 this.Hide();
-                FrmObservacion abrir = new FrmObservacion();
+                //FrmObservacion abrir = new FrmObservacion();
+                //abrir.Show();
+
+                FrmCorteEntrada abrir = new FrmCorteEntrada();
                 abrir.Show();
             }
 

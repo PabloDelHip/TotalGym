@@ -43,6 +43,7 @@
             this.label1.Size = new System.Drawing.Size(164, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "DINERO EN CAJA";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -67,6 +68,7 @@
             this.label2.Size = new System.Drawing.Size(34, 40);
             this.label2.TabIndex = 3;
             this.label2.Text = "$";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtDineroCaja
             // 
@@ -77,6 +79,7 @@
             this.txtDineroCaja.Size = new System.Drawing.Size(179, 43);
             this.txtDineroCaja.TabIndex = 2;
             this.txtDineroCaja.Text = "0.00";
+            this.txtDineroCaja.TextChanged += new System.EventHandler(this.txtDineroCaja_TextChanged);
             // 
             // FrmCorteEntrada
             // 
