@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2003
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaAccesoDatos", "CapaAccesoDatos\CapaAccesoDatos.csproj", "{2E090F49-92B2-4125-88DE-D0D92F14E50A}"
 EndProject
@@ -33,20 +33,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5CD69F3D-F654-446C-A1D7-0F63BA6C1619}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://pacogalindo.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = CapaAccesoDatos\\CapaAccesoDatos.csproj
-		SccProjectName1 = CapaAccesoDatos
-		SccLocalPath1 = CapaAccesoDatos
-		SccProjectUniqueName2 = CapaLogicaNegocios\\CapaLogicaNegocios.csproj
-		SccProjectName2 = CapaLogicaNegocios
-		SccLocalPath2 = CapaLogicaNegocios
-		SccProjectUniqueName3 = CapaPresentacion\\CapaPresentacion.csproj
-		SccProjectName3 = CapaPresentacion
-		SccLocalPath3 = CapaPresentacion
 	EndGlobalSection
 EndGlobal

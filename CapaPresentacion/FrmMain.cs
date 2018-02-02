@@ -178,5 +178,23 @@ namespace CapaPresentacion
             FrmTextoEmails abrir = new FrmTextoEmails();
             AbrirVentanas(abrir);
         }
+
+<<<<<<< HEAD
+        private void cortesDeCajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCortesCaja abrir = new FrmCortesCaja();
+            AbrirVentanas(abrir);
+=======
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void corteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCorteSalida abrir = new FrmCorteSalida();
+            abrir.ShowDialog();
+>>>>>>> 5dbc4da04bb1d73c5fbba2efb04819f505d8e0b0
+        }
     }
 }

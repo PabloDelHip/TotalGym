@@ -201,7 +201,6 @@
             this.groupBox2.Controls.Add(this.DTPFechaVencHasta);
             this.groupBox2.Controls.Add(this.DTPFechaVencimDesde);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Enabled = false;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(6, 307);
             this.groupBox2.Name = "groupBox2";
@@ -576,7 +575,7 @@
             this.TabHistorial.Location = new System.Drawing.Point(4, 22);
             this.TabHistorial.Name = "TabHistorial";
             this.TabHistorial.Padding = new System.Windows.Forms.Padding(3);
-            this.TabHistorial.Size = new System.Drawing.Size(758, 686);
+            this.TabHistorial.Size = new System.Drawing.Size(758, 656);
             this.TabHistorial.TabIndex = 1;
             this.TabHistorial.Text = "Historial";
             this.TabHistorial.UseVisualStyleBackColor = true;
@@ -632,7 +631,7 @@
             // 
             this.TabFoto.Location = new System.Drawing.Point(4, 22);
             this.TabFoto.Name = "TabFoto";
-            this.TabFoto.Size = new System.Drawing.Size(758, 686);
+            this.TabFoto.Size = new System.Drawing.Size(758, 656);
             this.TabFoto.TabIndex = 2;
             this.TabFoto.Text = "Foto";
             this.TabFoto.UseVisualStyleBackColor = true;
